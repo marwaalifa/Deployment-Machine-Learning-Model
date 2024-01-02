@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Data Analysis Dashboard</title>
+	<!-- core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/animate.min.css" rel="stylesheet" type="text/css"> 
+    <link href="static/css/prettyPhoto.css" rel="stylesheet" type="text/css">
+    <link href="static/css/styles.css" rel="stylesheet" type="text/css"> 
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="logo.png"> 
+</head> 
+
+<body id="home">
+    <header id="header">
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="#home">Home</a></li> 
+						<li class="scroll"><a href="#products">Products</a></li>
+                        <li class="scroll"><a href="#services">Services</a></li>
+                        <li class="scroll"><a href="#about">About</a></li> 
+                        <li class="scroll"><a href="#contact-us">Contact</a></li>                        
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="hero-banner">
+             <div class="banner-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                 
+                                    <h2>Data Analys Dashboard</h2>
+                                    <p>Explore and analyze the dataset to gain insights.</p>
+                                    <a class="btn btn-primary btn-lg" href="#">Learn More</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section><!--/#main-slider-->
+<section class="download-now" id="products">
+        <div class="container">
+		 <div class="section-header">
+                <h2 class="section-title wow fadeInDown">Our Product</h2>
+                <p class="wow fadeInDown">
+                    Introducing our Product: Sentiment Analysis Data</p>
+            </div>
+			
+          <div class="row">
+            <div class="col-md-6 wp1 animated fadeInUp"> 
+              <p>Our Data Sentiment Analysis product is designed to streamline the process of sentiment recognition within textual data. Tailored for ease of use, this tool is dedicated to simplifying sentiment analysis tasks by providing accurate insights into the emotional tone and polarity of textual content. Whether you're analyzing customer reviews, social media comments, or any other text-based data, our product empowers you to effortlessly identify and understand sentiments, allowing for more informed decision-making and comprehensive data interpretation.</p>
+              <p>Our Product empowers you to analyze and understand the sentiment behind the words, contributing to more informed decision-making and enhanced comprehension of text-based content.</p>
+              <a href="#" class="download-btn">Contact Now</a>
+            </div>
+			
+            </div><!--/.row-->  
+			</div>
+          </div>
+        </div>
+      </section>
+	  
+   <section id="services" >
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">Our Services</h2>
+                <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+
+            <div class="login">
+                <h1>Sentiment Analysis</h1>
+            
+                 <!-- Main Input For Receiving Query to our ML -->
+            
+                <form action="{{ url_for('predict')}}"method="post">
+                    <input type="text" name="Insert your word here" placeholder="Insert your word here" required="required" />
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Predict Sentiment</button>
+                </form>
+            
+               <br>
+               <br>
+               {{ prediction_text }}
+              </div>
+        
+            
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+ <section id="about">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">About Us</h2>
+                <p class="wow fadeInDown">Introducing Our Company: Empowering Data Enthusiasts through Innovative Website Applications</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                  <img class="img-responsive" src="about.png" alt="">
+                </div>
+
+                <div class="col-sm-6 wow fadeInRight">
+                    <h3 class="column-title">Our Company</h3>
+                    <p>We are proud to be the company behind an innovative website application dedicated to simplifying the journey for data enthusiasts. Our mission is to provide a seamless platform where individuals passionate about data can explore, analyze, and derive insights effortlessly. Whether you are a seasoned data professional or someone just starting to delve into the world of data analysis, our website application is designed to cater to your needs, offering a user-friendly experience that empowers you to harness the full potential of data with ease and efficiency. Welcome to a new era of data exploration and discovery with [Your Company Name].</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam. </p>
+
+					<p>Praesent vulputate fermentum lorem, id rhoncus sem vehicula eu. Quisque ullamcorper, orci adipiscing auctor viverra, velit arcu malesuada metus, in volutpat tellus sem at justo.</p>
+
+
+                    <a class="btn btn-primary" href="#">Learn More</a>
+
+                </div>
+            </div>
+        </div>
+    </section><!--/#about-->
+
+    </section>
+       <section id="business-stats">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">User Stats</h2>
+                <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="business-stats" data-digit="6850" data-duration="1000"></div>
+                        <strong>User</strong>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="business-stats" data-digit="4325" data-duration="1000"></div>
+                        <strong>In Progress</strong>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="business-stats" data-digit="1465" data-duration="1000"></div>
+                        <strong>Completed</strong>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <div class="business-stats" data-digit="2568" data-duration="1000"></div>
+                        <strong>Registered users</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#business-stats-->
+
+    
+
+    <section class="testimonial-area" id="testimonial">
+			<div class="container">
+				<div class="section-header">
+                <h2 class="section-title wow fadeInDown">Testimonial</h2>
+                <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="single-testimonial animate_fade_in" style="opacity: 1; right: 0px;">
+							<div class="row">
+								<div class="col-xs-12">
+									<blockquote>Sontrary to popular belief, Lorem Ipsuis no simply random text. It has roots in a piece of classical Layears old. belief, Lorem Ipsuis not simply</blockquote>
+								</div>
+							</div>
+							<div class="row"> 
+								<div class="col-xs-12">
+									<h5>John Doe</h5>
+									<h6>Lorem Ipsuis simply</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-testimonial animate_fade_in" style="opacity: 1; right: 0px;">
+							<div class="row">
+								<div class="col-xs-12">
+									<blockquote>Tontrary to popular belief, Lorem Ipsuis no simply random text. It has roots in a piece of classical Layears old. belief, Lorem Ipsuis not simply</blockquote>
+								</div>
+							</div>
+							<div class="row"> 
+								<div class="col-xs-12">
+									<h5>Michelle</h5>
+									<h6>Lorem Ipsuis simply</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-testimonial animate_fade_in" style="opacity: 1; right: 0px;">
+							<div class="row">
+								<div class="col-xs-12">
+									<blockquote>Aontrary to popular belief, Lorem Ipsuis no simply random text. It has roots in a piece of classical Layears old. belief, Lorem Ipsuis not simply</blockquote>
+								</div>
+							</div>
+							<div class="row"> 
+								<div class="col-xs-12">
+									<h5>Ari arina</h5>
+									<h6>Lorem Ipsuis simply</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    <section id="contact-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">Contact Us</h2>
+                <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+        </div>
+    </section><!--/#contact-us-->
+
+
+    <section id="contact">
+        
+        <div class="container">
+            <div class="container contact-info">
+                <div class="row">
+				  <div class="col-sm-4 col-md-4">
+                        <div class="contact-form">
+                            <h3>Contact Info</h3>
+
+                            <address>
+                              <strong>Data Sentiment Analys, Co.Ltd</strong><br>
+                              Malang<br>
+                              East Java<br>
+                              <abbr title="Phone">P:</abbr> (62) 123-456788
+                            </address>
+					</div></div>
+                    <div class="col-sm-8 col-md-8">
+                        <div class="contact-form">
+                       
+                            <form id="main-contact-form" name="contact-form" method="post" action="#">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" rows="8" placeholder="Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+   </section><!--/#bottom-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2015 Company Name. Template by <a target="_blank" href="http://webthemez.com/" title="Free Bootstrap Themes and HTML Templates">WebThemez.com</a>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom-scripts.js"></script>
+</body>
+</html>
